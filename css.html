@@ -1,0 +1,153 @@
+
+Game development
+/
+You said: Hen Escape: Snake City Maze
+# Hen Escape: Snake City Maze
+
+## index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hen Escape</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="gameContainer">
+
+  <div id="ui">
+    <h1>Hen Escape</h1>
+    <div class="stats">
+      <p>Stamina: <span id="stamina">100</span></p>
+      <p>Coins: <span id="coins">0</span></p>
+    </div>
+  </div>
+
+  <div id="maze">
+    <div id="hen"></div>
+    <div id="snake"></div>
+    <div id="exitGate">EXIT</div>
+  </div>
+
+  <div id="controls">
+    <button id="leftBtn">⬅ Back</button>
+    <button id="rightBtn">Forward ➡</button>
+  </div>
+
+  <div id="message"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+---
+
+## style.css
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+#gameContainer {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+#maze {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200');
+  background-size: cover;
+  background-position: center;
+}
+
+#hen {
+  width: 60px;
+  height: 60px;
+  background: yellow;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 80px;
+  left: 50px;
+  box-shadow: 0 0 20px yellow;
+}
+
+#snake {
+  width: 120px;
+  height: 30px;
+  background: limegreen;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 90px;
+  right: 100px;
+  box-shadow: 0 0 20px lime;
+}
+
+#exitGate {
+  width: 100px;
+  height: 120px;
+  background: cyan;
+  position: absolute;
+  right: 20px;
+  bottom: 50px;
+  text-align: center;
+  line-height: 120px;
+  font-weight: bold;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 25px cyan;
+}
+
+#ui {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+#controls {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 20;
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: purple;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #cc00ff;
+}
+
+message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-weight: bold;
+  color: yellow;
+  z-index: 30;
+}

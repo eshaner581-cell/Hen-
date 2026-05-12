@@ -1,0 +1,46 @@
+
+Game development
+/
+You said: Hen Escape: Snake City Maze
+# Hen Escape: Snake City Maze
+
+## index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hen Escape</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="gameContainer">
+
+  <div id="ui">
+    <h1>Hen Escape</h1>
+    <div class="stats">
+      <p>Stamina: <span id="stamina">100</span></p>
+      <p>Coins: <span id="coins">0</span></p>
+    </div>
+  </div>
+
+  <div id="maze">
+    <div id="hen"></div>
+    <div id="snake"></div>
+    <div id="exitGate">EXIT</div>
+  </div>
+
+  <div id="controls">
+    <button id="leftBtn">⬅ Back</button>
+    <button id="rightBtn">Forward ➡</button>
+  </div>
+
+  <div id="message"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
